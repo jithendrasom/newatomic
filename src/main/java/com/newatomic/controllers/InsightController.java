@@ -20,7 +20,7 @@ public class InsightController {
     public ResponseEntity<?> postUser(@RequestParam MultipartFile fileContent){
         try{
             List<Double> ltps = utilService.getValuesInFileContent(fileContent);  
-            //got from C:\D-folder\data\weekdaywise-data\Thursday\2022-06-09
+            //got from C:\D-folder\data\weekdaywise-data\Thursday\2023-06-09
             //TODO now process the ltps and build logic for in trade management
 
             return new ResponseEntity<>("", HttpStatus.ACCEPTED);

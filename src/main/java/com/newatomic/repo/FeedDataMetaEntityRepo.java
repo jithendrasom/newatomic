@@ -7,9 +7,12 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDate;
 import java.util.List;
 
+/*
 @Repository
 public interface FeedDataMetaEntityRepo extends JpaRepository<FeedDataMetaEntity, Long> {
     List<FeedDataMetaEntity> findAllByInstrumentToken(Long token);
 
     List<FeedDataMetaEntity> findAllByTradingSymbolAndRecordDate(String tradingSymbol, LocalDate recordDate);
-}
+}*/
+
+public interface FeedDataMetaEntityRepo {}
