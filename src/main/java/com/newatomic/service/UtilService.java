@@ -16,8 +16,9 @@ public class UtilService {
             BufferedReader csvReader = new BufferedReader
                     (new InputStreamReader(new ByteArrayInputStream(fileConent.getBytes ())));
 
-            List<Double> closeList = csvReader.lines ().map (Double::valueOf).collect (Collectors.toList ());
-            List<Double> closeSubList = closeList.subList (0, 3000);
+            List<Double> closeList = csvReader.lines ().skip(2).map (a-> Double.valueOf(a.split(",")[0]))
+                    .collect (Collectors.toList ());
+            List<Double> closeSubList = closeList.subList (0, 600);
             csvReader.close ();
             return closeSubList;
         } catch (IOException ioe){ioe.printStackTrace ();}
